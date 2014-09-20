@@ -7,7 +7,8 @@ foreach ($all as $session) {
 
 <div class="panel panel-info">
     <div class="panel-heading">
-        <h3 class="panel-title"><big><?php echo $session['session_name'];?></big></h3>
+        <h3 class="panel-title"><big><?php echo $session['session_name'];?></big></h3><br>
+        <div class="alert alert-warning" role="alert"><?php echo $this->getSessionCompletionTime($session['session_id']);?></div>
     </div>
     <div class="panel-body">
     	<div class="alert alert-info" role="alert">
@@ -17,7 +18,8 @@ foreach ($all as $session) {
     	?>
     		<div class="panel panel-info">
     			<div class="panel-heading">
-    				<h5 class="panel-title"><?php echo "(".$listening["listening_name"].") X ".$listening["listening_repeat_number"];?></h5>
+    				<h5 class="panel-title"><?php echo "(".$listening["listening_name"].") X ".$listening["listening_repeat_number"];?></h5><br>
+    				<div class="alert alert-warning" role="alert"><?php echo $this->getListeningCompletionTime($listening["listening_id"]);?></div>
     			</div>
     			<div class="panel-body">
     			    	<?php 
