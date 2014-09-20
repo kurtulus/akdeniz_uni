@@ -24,6 +24,44 @@ class ListController extends Controller
 			return 0;
 		}
 	}
+	protected function getSessionCompletionTime($session_id)
+	{
+		$session_log=SessionLog::model()->find('session_id=:session_id',array('session_id'=>$session_id));
+		if($session_log)
+		{
+			if($session_log->session_end_time)
+			{
+				return "<b>Begin time: </b>".$session_log->session_begin_time." - <b>End time: </b>".$session_log->session_end_time;
+			}
+			else
+			{
+				return "<b>Begin time: </b>".$session_log->session_begin_time." - <b>End time: </b>Not completed yet!";
+			}
+		}
+		else
+		{
+			return "<b>not yet begun!</b>";
+		}
+	}
+	protected function getListeningCompletionTime($listening_id)
+	{
+		$listening_log=ListeningLog::model()->find('listening_id=:listening_id',array('listening_id'=>$listening_id));
+		if($listening_log)
+		{
+			if($listening_log->listening_end_time)
+			{
+				return "<b>Begin time: </b>".$listening_log->listening_begin_time." - <b>End time: </b>".$listening_log->listening_end_time;
+			}
+			else
+			{
+				return "<b>Begin time: </b>".$listening_log->listening_begin_time." - <b>End time: </b>Not completed yet!";
+			}
+		}
+		else
+		{
+			return "<b>not yet begun!</b>";
+		}
+	}
 	protected function getYourAnswerId($question_id,$student_id)
 	{
 		$student_question=StudentQuestion::model()->find('student_id=:student_id AND question_id=:question_id',array('student_id'=>$student_id,'question_id'=>$question_id));
