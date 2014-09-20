@@ -23,6 +23,8 @@ foreach ($all as $session) {
     			    	<?php 
 				    		$questions=$listening['questions'];
 				    		foreach ($questions as $question) {
+				    			$correct_answer_id=$this->getCorrectAnswerId($question["question_id"]);
+				    			$your_answer_id=$this->getYourAnswerId($question["question_id"],$student_id);
 				    	?>
 				    	<div class="alert alert-info" role="alert">
 				    	<?php echo $question["question_body"]."<br><br>";
@@ -31,6 +33,17 @@ foreach ($all as $session) {
 				    	?>
 				    			<div style="margin-left:50px;background-color:white" class="alert alert-default" role="alert">
 				    				<?php echo $answer["answer_body"];?>
+				    				<?php 
+				    					if($answer["answer_id"]==$correct_answer_id)
+				    					{
+				    						echo '<span class="label label-success">Correct Answer</span>';
+				    					}
+				    					if($answer["answer_id"]==$your_answer_id)
+				    					{
+				    						echo '<span class="label label-info">Your Answer</span>';
+				    					}
+
+				    				?>
 				    			</div>
 				    	<?php } ?>
 				    	</div>

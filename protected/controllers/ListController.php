@@ -13,6 +13,29 @@ class ListController extends Controller
 
 		$this->render('students',array('currents'=>$currents));
 	}
+	protected function getCorrectAnswerId($question_id)
+	{
+		$question=Question::model()->find('question_id=:question_id',array('question_id'=>$question_id));
+		if($question){
+			return $question->question_correct_answer_id;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	protected function getYourAnswerId($question_id,$student_id)
+	{
+		$student_question=StudentQuestion::model()->find('student_id=:student_id AND question_id=:question_id',array('student_id'=>$student_id,'question_id'=>$question_id));
+		if($student_question)
+		{
+			return $student_question->answer_id;
+		}
+		else
+		{
+			return 0;
+		}		
+	}
 	public function actionResults()
 	{
 		$student_id=Yii::app()->request->getQuery("student_id",NULL);
@@ -66,7 +89,7 @@ class ListController extends Controller
 			}
 		}
 
-		$this->render('results',array('all'=>$all));
+		$this->render('results',array('all'=>$all,'student_id'=>$student_id));
 	}
 	protected function getSessionLogs($student_id){
 		$session_logs=SessionLog::model()->findAll('student_id=:student_id AND (session_end_time!=NULL or session_end_time!="")',array(':student_id'=>$student_id));
