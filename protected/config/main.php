@@ -5,6 +5,25 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+$db_option=array(
+                                /*my personel computer*/
+                                'linden'=>array(
+                                        'connectionString' => 'mysql:host=localhost;dbname=fast_listening',
+                                        'emulatePrepare' => true,
+                                        'username' => 'root',
+                                        'password' => '12548442',
+                                        'charset' => 'utf8',
+                                ),
+                                'ulgen'=>array(
+                                'connectionString' => 'mysql:host=lindneo.com;port=3306;dbname=fast_listening',
+                                'emulatePrepare' => true,
+                                'username' => 'root',
+                                'password' => '12548442',
+                                'charset' => 'utf8',
+                        )
+                    );
+
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Akdeniz Üniversitesi-BÖTE',
@@ -59,13 +78,7 @@ return array(
 		),*/
 		// uncomment the following to use a MySQL database
 		
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=fast_listening',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '12548442',
-			'charset' => 'utf8',
-		),
+		'db'=>$db_option[gethostname()],
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
