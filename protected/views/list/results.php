@@ -53,11 +53,11 @@ foreach ($all as $session) {
 				    				<?php 
 				    					if($answer["answer_id"]==$correct_answer_id)
 				    					{
-				    						echo '<span class="label label-success">Correct Answer</span>';
+				    						echo '<span class="label label-success">Doğru Cevap</span>';
 				    					}
 				    					if($answer["answer_id"]==$your_answer_id)
 				    					{
-				    						echo '<span class="label label-info">Your Answer</span>';
+				    						echo '<span class="label label-info">Öğrencinin Cevabı</span>';
 				    					}
 
 
@@ -117,9 +117,9 @@ foreach ($results as $session_name=>$sessions)
 				<?php if($listening_name!="incorrect" && $listening_name!="correct" && $listening_name!="empty"){
 					?>
 					<span style="display:inline-block;width:100px;"><?php echo $listening_name;?>:</span>
-					<span class="label label-success">Correct:<?php echo $session["correct"] ?></span>
-					<span class="label label-warning">Incorrect:<?php echo $session["incorrect"] ?></span>
-					<span class="label label-info">Empty:<?php echo $session["empty"] ?></span>
+					<span class="label label-success">Doğru:<?php echo $session["correct"] ?></span>
+					<span class="label label-warning">Yanlış:<?php echo $session["incorrect"] ?></span>
+					<span class="label label-info">Cevaplanmayan:<?php echo $session["empty"] ?></span>
 			</h5>
 		<!--
 		/*echo $listening_name."<br>";
@@ -132,10 +132,10 @@ foreach ($results as $session_name=>$sessions)
 		}
 	}
 	?>
-		<h5><span style="display:inline-block;width:100px;">Total:</span>
-					<span class="label label-success">Correct:<?php echo $results[$session_name]["correct"];?></span>
-					<span class="label label-warning">Incorrect:<?php echo $results[$session_name]["incorrect"];?></span>
-					<span class="label label-info">Empty:<?php echo $results[$session_name]["empty"];?></span>
+		<h5><span style="display:inline-block;width:100px;">Toplam:</span>
+					<span class="label label-success">Doğru:<?php echo $results[$session_name]["correct"];?></span>
+					<span class="label label-warning">Yanlış:<?php echo $results[$session_name]["incorrect"];?></span>
+					<span class="label label-info">Cevaplanmayan:<?php echo $results[$session_name]["empty"];?></span>
 		</h5>
 	<?php
 
@@ -147,14 +147,14 @@ foreach ($results as $session_name=>$sessions)
 
 ?>
 <hr>
-<h4>Grand Total</h4>
+<h4>Genel Toplam</h4>
 <div class="alert alert-success col-lg-4">
-<strong># of Corrects:</strong><?php echo $results["correct"];?>
+<strong>Doğruların sayısı:</strong><?php echo $results["correct"];?>
 </div>
 <div class="alert alert-warning col-lg-4">
-<strong># of Incorrects:</strong><?php echo $results["incorrect"];?>
+<strong>Yanlışların sayısı:</strong><?php echo $results["incorrect"];?>
 </div>
 <div class="alert alert-info col-lg-4">
-<strong># of Empties:</strong><?php echo $results["empty"];?>
+<strong>Cevaplanmayanların sayısı:</strong><?php echo $results["empty"];?>
 </div>
 </div>
