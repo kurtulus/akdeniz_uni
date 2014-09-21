@@ -7813,3 +7813,30 @@ Stack trace:
 REQUEST_URI=/akdeniz/js/library/base64.js
 HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
 ---
+2014/09/21 06:25:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:26:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:28:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---

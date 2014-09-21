@@ -31,16 +31,16 @@ class ListController extends Controller
 		{
 			if($session_log->session_end_time)
 			{
-				return "<b>Begin time: </b>".$session_log->session_begin_time." - <b>End time: </b>".$session_log->session_end_time;
+				return "<b>Başlangıç: </b>".$session_log->session_begin_time." - <b>Bitiş: </b>".$session_log->session_end_time;
 			}
 			else
 			{
-				return "<b>Begin time: </b>".$session_log->session_begin_time." - <b>End time: </b>Not completed yet!";
+				return "<b>Başlangıç: </b>".$session_log->session_begin_time." - <b>Bitiş: </b>Henüz tamamlanmadı!";
 			}
 		}
 		else
 		{
-			return "<b>not yet begun!</b>";
+			return "<b>Henüz başlamadı!</b>";
 		}
 	}
 	protected function getListeningCompletionTime($listening_id)
@@ -50,16 +50,16 @@ class ListController extends Controller
 		{
 			if($listening_log->listening_end_time)
 			{
-				return "<b>Begin time: </b>".$listening_log->listening_begin_time." - <b>End time: </b>".$listening_log->listening_end_time;
+				return "<b>Başlangıç: </b>".$listening_log->listening_begin_time." - <b>Bitiş: </b>".$listening_log->listening_end_time;
 			}
 			else
 			{
-				return "<b>Begin time: </b>".$listening_log->listening_begin_time." - <b>End time: </b>Not completed yet!";
+				return "<b>Başlangıç: </b>".$listening_log->listening_begin_time." - <b>Bitiş: </b>Henüz tamamlanmadı!";
 			}
 		}
 		else
 		{
-			return "<b>not yet begun!</b>";
+			return "<b>Henüz başlamadı!</b>";
 		}
 	}
 	protected function getYourAnswerId($question_id,$student_id)
