@@ -6674,3 +6674,66 @@ Stack trace:
 REQUEST_URI=/akdeniz/js/library/base64.js
 HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
 ---
+2014/09/21 04:13:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lindneo.com/htdocs/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://lindneo.com/akdeniz/site/login
+---
+2014/09/21 04:13:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lindneo.com/htdocs/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://lindneo.com/akdeniz/list/students
+---
+2014/09/21 04:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lindneo.com/htdocs/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://lindneo.com/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lindneo.com/htdocs/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://lindneo.com/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lindneo.com/htdocs/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://lindneo.com/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:23:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lindneo.com/htdocs/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://lindneo.com/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:23:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/lindneo.com/htdocs/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lindneo.com/htdocs/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://lindneo.com/akdeniz/list/results?student_id=1
+---
