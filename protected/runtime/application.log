@@ -6674,3 +6674,1142 @@ Stack trace:
 REQUEST_URI=/akdeniz/js/library/base64.js
 HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
 ---
+2014/09/21 04:23:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/site/login
+---
+2014/09/21 04:24:01 [error] [php] Undefined index: 1.Oturum (/var/www/akdeniz/protected/views/list/results.php:63)
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(869): ListController->renderFile()
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(782): ListController->renderPartial()
+#2 /var/www/akdeniz/protected/controllers/ListController.php(130): ListController->render()
+#3 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/actions/CInlineAction.php(49): ListController->actionResults()
+#4 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(133): ListController->runAction()
+#6 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CInlineFilter.php(58): ListController->filterAccessControl()
+#9 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(265): ListController->runActionWithFilters()
+#12 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(282): ListController->run()
+#13 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/akdeniz/index.php(13): CWebApplication->run()
+REQUEST_URI=/akdeniz/list/results?student_id=1
+in /var/www/akdeniz/protected/views/list/results.php (63)
+in /var/www/akdeniz/protected/controllers/ListController.php (130)
+in /var/www/akdeniz/index.php (13)
+2014/09/21 04:25:53 [error] [php] Undefined index: incorrect (/var/www/akdeniz/protected/views/list/results.php:63)
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(869): ListController->renderFile()
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(782): ListController->renderPartial()
+#2 /var/www/akdeniz/protected/controllers/ListController.php(130): ListController->render()
+#3 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/actions/CInlineAction.php(49): ListController->actionResults()
+#4 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(133): ListController->runAction()
+#6 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CInlineFilter.php(58): ListController->filterAccessControl()
+#9 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(265): ListController->runActionWithFilters()
+#12 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(282): ListController->run()
+#13 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/akdeniz/index.php(13): CWebApplication->run()
+REQUEST_URI=/akdeniz/list/results?student_id=1
+in /var/www/akdeniz/protected/views/list/results.php (63)
+in /var/www/akdeniz/protected/controllers/ListController.php (130)
+in /var/www/akdeniz/index.php (13)
+2014/09/21 04:25:57 [error] [php] Undefined index: incorrect (/var/www/akdeniz/protected/views/list/results.php:63)
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(869): ListController->renderFile()
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(782): ListController->renderPartial()
+#2 /var/www/akdeniz/protected/controllers/ListController.php(130): ListController->render()
+#3 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/actions/CInlineAction.php(49): ListController->actionResults()
+#4 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(133): ListController->runAction()
+#6 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CInlineFilter.php(58): ListController->filterAccessControl()
+#9 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(265): ListController->runActionWithFilters()
+#12 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(282): ListController->run()
+#13 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/akdeniz/index.php(13): CWebApplication->run()
+REQUEST_URI=/akdeniz/list/results?student_id=1
+in /var/www/akdeniz/protected/views/list/results.php (63)
+in /var/www/akdeniz/protected/controllers/ListController.php (130)
+in /var/www/akdeniz/index.php (13)
+2014/09/21 04:25:59 [error] [php] Undefined index: incorrect (/var/www/akdeniz/protected/views/list/results.php:63)
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(869): ListController->renderFile()
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(782): ListController->renderPartial()
+#2 /var/www/akdeniz/protected/controllers/ListController.php(130): ListController->render()
+#3 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/actions/CInlineAction.php(49): ListController->actionResults()
+#4 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(133): ListController->runAction()
+#6 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CInlineFilter.php(58): ListController->filterAccessControl()
+#9 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(265): ListController->runActionWithFilters()
+#12 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(282): ListController->run()
+#13 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/akdeniz/index.php(13): CWebApplication->run()
+REQUEST_URI=/akdeniz/list/results?student_id=1
+in /var/www/akdeniz/protected/views/list/results.php (63)
+in /var/www/akdeniz/protected/controllers/ListController.php (130)
+in /var/www/akdeniz/index.php (13)
+2014/09/21 04:26:50 [error] [php] Undefined index: correct (/var/www/akdeniz/protected/views/list/results.php:53)
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(869): ListController->renderFile()
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(782): ListController->renderPartial()
+#2 /var/www/akdeniz/protected/controllers/ListController.php(130): ListController->render()
+#3 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/actions/CInlineAction.php(49): ListController->actionResults()
+#4 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(133): ListController->runAction()
+#6 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CInlineFilter.php(58): ListController->filterAccessControl()
+#9 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(265): ListController->runActionWithFilters()
+#12 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(282): ListController->run()
+#13 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/akdeniz/index.php(13): CWebApplication->run()
+REQUEST_URI=/akdeniz/list/results?student_id=1
+in /var/www/akdeniz/protected/views/list/results.php (53)
+in /var/www/akdeniz/protected/controllers/ListController.php (130)
+in /var/www/akdeniz/index.php (13)
+2014/09/21 04:27:50 [error] [php] Undefined index: correct (/var/www/akdeniz/protected/views/list/results.php:53)
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(869): ListController->renderFile()
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(782): ListController->renderPartial()
+#2 /var/www/akdeniz/protected/controllers/ListController.php(130): ListController->render()
+#3 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/actions/CInlineAction.php(49): ListController->actionResults()
+#4 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(133): ListController->runAction()
+#6 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CInlineFilter.php(58): ListController->filterAccessControl()
+#9 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(265): ListController->runActionWithFilters()
+#12 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(282): ListController->run()
+#13 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/akdeniz/index.php(13): CWebApplication->run()
+REQUEST_URI=/akdeniz/list/results?student_id=1
+in /var/www/akdeniz/protected/views/list/results.php (53)
+in /var/www/akdeniz/protected/controllers/ListController.php (130)
+in /var/www/akdeniz/index.php (13)
+2014/09/21 04:28:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:28:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:29:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:40:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:41:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:42:14 [error] [php] Undefined variable: result (/var/www/akdeniz/protected/views/list/results.php:95)
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(869): ListController->renderFile()
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(782): ListController->renderPartial()
+#2 /var/www/akdeniz/protected/controllers/ListController.php(130): ListController->render()
+#3 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/actions/CInlineAction.php(49): ListController->actionResults()
+#4 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(133): ListController->runAction()
+#6 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CInlineFilter.php(58): ListController->filterAccessControl()
+#9 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(265): ListController->runActionWithFilters()
+#12 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(282): ListController->run()
+#13 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/akdeniz/index.php(13): CWebApplication->run()
+REQUEST_URI=/akdeniz/list/results?student_id=1
+in /var/www/akdeniz/protected/views/list/results.php (95)
+in /var/www/akdeniz/protected/controllers/ListController.php (130)
+in /var/www/akdeniz/index.php (13)
+2014/09/21 04:42:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:42:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:44:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:45:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:47:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:48:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:48:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:50:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:50:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:52:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:52:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:54:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:56:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:58:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:59:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 04:59:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:02:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:03:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:03:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:04:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:05:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:05:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:05:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:05:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:05:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:06:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:08:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:08:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:08:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:08:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:10:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:11:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:11:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:14:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:17:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:18:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:20:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:20:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:20:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:20:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:22:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:22:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:22:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:26:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:32:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:34:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:37:14 [error] [php] Undefined index: incorrect (/var/www/akdeniz/protected/views/list/results.php:68)
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(869): ListController->renderFile()
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(782): ListController->renderPartial()
+#2 /var/www/akdeniz/protected/controllers/ListController.php(130): ListController->render()
+#3 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/actions/CInlineAction.php(49): ListController->actionResults()
+#4 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(133): ListController->runAction()
+#6 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CInlineFilter.php(58): ListController->filterAccessControl()
+#9 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CController.php(265): ListController->runActionWithFilters()
+#12 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(282): ListController->run()
+#13 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/akdeniz/index.php(13): CWebApplication->run()
+REQUEST_URI=/akdeniz/list/results?student_id=1
+in /var/www/akdeniz/protected/views/list/results.php (68)
+in /var/www/akdeniz/protected/controllers/ListController.php (130)
+in /var/www/akdeniz/index.php (13)
+2014/09/21 05:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:40:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:41:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:41:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:43:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:43:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:47:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:48:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:48:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:48:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:48:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:49:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:50:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:50:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:50:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:51:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:52:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:54:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:55:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:56:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/students
+---
+2014/09/21 05:56:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 05:56:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/students
+---
+2014/09/21 05:56:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:01:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:03:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:03:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:04:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:05:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:06:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:07:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:08:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:10:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:11:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:11:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:12:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:12:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:12:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:12:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:12:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---
+2014/09/21 06:12:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=2
+---
+2014/09/21 06:12:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=3
+---
+2014/09/21 06:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=4
+---
+2014/09/21 06:13:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/library/base64.js".' in /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/akdeniz/yii-1.1.15.022a51/framework/web/CWebApplication.php(141): CWebApplication->runController('js/library/base...')
+#1 /var/www/akdeniz/yii-1.1.15.022a51/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/akdeniz/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/akdeniz/js/library/base64.js
+HTTP_REFERER=http://localhost/akdeniz/list/results?student_id=1
+---

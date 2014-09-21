@@ -2,9 +2,18 @@
 
 <?php
 //print_r($all);
-foreach ($all as $session) {
-?>
+$results=array();
+$results["incorrect"]=0;
+$results["correct"]=0;
+$results["empty"]=0;
 
+foreach ($all as $session) {
+	$results[$session['session_name']]=array();
+
+	$results[$session['session_name']]["incorrect"]=0;
+	$results[$session['session_name']]["correct"]=0;
+	$results[$session['session_name']]["empty"]=0;
+?>
 <div class="panel panel-info">
     <div class="panel-heading">
         <h3 class="panel-title"><big><?php echo $session['session_name'];?></big></h3><br>
@@ -15,6 +24,10 @@ foreach ($all as $session) {
     	<?php 
     		$listenings=$session['listenings'];
     		foreach ($listenings as $listening) {
+    			$results[$session['session_name']][$listening["listening_name"]]=array();
+    			$results[$session['session_name']][$listening["listening_name"]]["correct"]=0;
+    			$results[$session['session_name']][$listening["listening_name"]]["incorrect"]=0;
+    			$results[$session['session_name']][$listening["listening_name"]]["empty"]=0;
     	?>
     		<div class="panel panel-info">
     			<div class="panel-heading">
@@ -27,11 +40,13 @@ foreach ($all as $session) {
 				    		foreach ($questions as $question) {
 				    			$correct_answer_id=$this->getCorrectAnswerId($question["question_id"]);
 				    			$your_answer_id=$this->getYourAnswerId($question["question_id"],$student_id);
+				    			//error_log($listening["listening_name"].":"."correct_answer_id:".$correct_answer_id."-".$your_answer_id."\n");
 				    	?>
 				    	<div class="alert alert-info" role="alert">
 				    	<?php echo $question["question_body"]."<br><br>";
 				    		$answers=$question['answers'];
-				    		foreach ($answers as $answer) {
+				    		foreach ($answers as $answer) 
+				    		{
 				    	?>
 				    			<div style="margin-left:50px;background-color:white" class="alert alert-default" role="alert">
 				    				<?php echo $answer["answer_body"];?>
@@ -45,9 +60,30 @@ foreach ($all as $session) {
 				    						echo '<span class="label label-info">Your Answer</span>';
 				    					}
 
+
 				    				?>
 				    			</div>
-				    	<?php } ?>
+				    	<?php }
+	    					if($correct_answer_id==$your_answer_id)
+	    					{
+	    						$results[$session['session_name']][$listening["listening_name"]]["correct"]+=1;
+	    						$results[$session['session_name']]["correct"]+=1;
+	    						$results["correct"]+=1;
+
+	    					}
+				    		else if($your_answer_id!=0)
+				    		{
+				    			$results[$session['session_name']][$listening["listening_name"]]["incorrect"]+=1;
+				    			$results[$session['session_name']]["incorrect"]+=1;
+				    			$results["incorrect"]+=1;
+				    		}
+				    		else
+				    		{
+				    			$results[$session['session_name']][$listening["listening_name"]]["empty"]+=1;
+				    			$results[$session['session_name']]["empty"]+=1;
+				    			$results["empty"]+=1;
+				    		}
+				    	 ?>
 				    	</div>
 				    	<?php } ?>
     			</div>
@@ -62,8 +98,63 @@ foreach ($all as $session) {
     </div>
 </div>
 
-
+<h3>Results</h3>
+<hr>
 <?php 
 }
+//print_r($results);
+
+foreach ($results as $session_name=>$sessions) 
+{
+	//echo $session_name."<br>";
+	if($session_name!="incorrect" && $session_name!="correct" && $session_name!="empty")
+	{
+	echo "<h4 style='margin-bottom:0px'>".$session_name."</h4><hr style='margin:0px'>";
+	foreach ($sessions as $listening_name=>$session) 
+	{
+		?>
+			<h5>
+				<?php if($listening_name!="incorrect" && $listening_name!="correct" && $listening_name!="empty"){
+					?>
+					<span style="display:inline-block;width:100px;"><?php echo $listening_name;?>:</span>
+					<span class="label label-success">Correct:<?php echo $session["correct"] ?></span>
+					<span class="label label-warning">Incorrect:<?php echo $session["incorrect"] ?></span>
+					<span class="label label-info">Empty:<?php echo $session["empty"] ?></span>
+			</h5>
+		<!--
+		/*echo $listening_name."<br>";
+		echo "Correct:".$session["correct"]."<br>";
+		echo "Incorrect:".$session["incorrect"]."<br>";
+		echo "Empty:".$session["empty"]."<br>";*/
+		//print_r($session);echo "<br>";-->
+
+	<?php
+		}
+	}
+	?>
+		<h5><span style="display:inline-block;width:100px;">Total:</span>
+					<span class="label label-success">Correct:<?php echo $results[$session_name]["correct"];?></span>
+					<span class="label label-warning">Incorrect:<?php echo $results[$session_name]["incorrect"];?></span>
+					<span class="label label-info">Empty:<?php echo $results[$session_name]["empty"];?></span>
+		</h5>
+	<?php
+
+	echo "<br>";
+	
+	}
+
+}
+
 ?>
+<hr>
+<h4>Grand Total</h4>
+<div class="alert alert-success col-lg-4">
+<strong># of Corrects:</strong><?php echo $results["correct"];?>
+</div>
+<div class="alert alert-warning col-lg-4">
+<strong># of Incorrects:</strong><?php echo $results["incorrect"];?>
+</div>
+<div class="alert alert-info col-lg-4">
+<strong># of Empties:</strong><?php echo $results["empty"];?>
+</div>
 </div>
