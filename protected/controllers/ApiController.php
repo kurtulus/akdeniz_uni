@@ -104,7 +104,30 @@ class ApiController extends Controller
 	public function actionPushQuestionnaireEnd()
 	{
 		$student_id=Yii::app()->request->getPost("student_id",NULL);	
-		$session_id=Yii::app()->request->getPost("session_id",NULL);	
+		$session_id=Yii::app()->request->getPost("session_id",NULL);
+
+
+		/*
+			next session
+		*/
+		$session=Session::model()->find('session_id=:session_id',array(':session_id'=>$session_id));
+
+		$mod_id=$session->mod_id;
+		$next_order=($session->session_order)+1;
+		$next_session=Session::model()->find('mod_id=:mod_id AND session_order=:session_order',array(':mod_id'=>$mod_id,':session_order'=>$next_order));
+
+		$current=Current::model()->find('student_id=:student_id',array(':student_id'=>$student_id));
+		//error_log(print_r($current,1));
+		//error_log("\n");
+		//error_log(print_r($next_session,1));
+		if($current)
+		{
+			$current->session_id=$next_session->session_id;
+			$current->save();
+		}
+
+
+
 		$end_questionnaire_answer=Yii::app()->request->getPost("end_questionnaire_answer",NULL);
 		$questionnaire=Questionnaire::model()->find('student_id=:student_id AND session_id=:session_id',array(':student_id'=>$student_id,':session_id'=>$session_id));
 		if($questionnaire)
