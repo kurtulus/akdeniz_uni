@@ -43,9 +43,9 @@ class ListController extends Controller
 			return "<b>Henüz başlamadı!</b>";
 		}
 	}
-	protected function getListeningCompletionTime($listening_id)
+	protected function getListeningCompletionTime($listening_id,$student_id)
 	{
-		$listening_log=ListeningLog::model()->find('listening_id=:listening_id',array('listening_id'=>$listening_id));
+		$listening_log=ListeningLog::model()->find('listening_id=:listening_id AND student_id=:student_id',array(':listening_id'=>$listening_id,':student_id'=>$student_id));
 		if($listening_log)
 		{
 			if($listening_log->listening_end_time)
