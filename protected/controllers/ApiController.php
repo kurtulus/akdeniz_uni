@@ -14,7 +14,7 @@ class ApiController extends Controller
 		$session_listenings=SessionListening::model()->findAll('session_id=:session_id',array(':session_id'=>$session_id));
 		$all=array();
 		$all["session_id"]=$session->session_id;
-		$all["session_name"]=$session->session_id;
+		$all["session_name"]=$session->session_name;
 		$all["session_order"]=$session->session_order;
 		$all["mod_id"]=$session->mod_id;
 		$all["listenings"]=array();
@@ -101,6 +101,21 @@ class ApiController extends Controller
 
 
 	}
+	protected function getMaxSession($student_id){
+		$current=Current::model()->find('student_id=:student_id',array('student_id'=>$student_id));
+		if($current)
+		{
+			$model = new Session;
+			$criteria=new CDbCriteria;
+			$criteria->select='MAX(session_id) AS maxColumn';
+			$criteria->condition = "mod_id =:mod_id";
+			$criteria->params = array(':mod_id' => $current->mod_id);
+			$row = $model->model()->find($criteria);
+			print_r($row);
+			//return $row['maxColumn'];
+
+		}
+	}
 	public function actionPushQuestionnaireEnd()
 	{
 		$student_id=Yii::app()->request->getPost("student_id",NULL);	
@@ -120,10 +135,20 @@ class ApiController extends Controller
 		//error_log(print_r($current,1));
 		//error_log("\n");
 		//error_log(print_r($next_session,1));
+
+		//print_r($this->getMaxSession($student_id));die();
+
 		if($current)
 		{
+
+			$session_listening=SessionListening::model()->find('session_id=:session_id',array('session_id'=>$next_session->session_id));
 			$current->session_id=$next_session->session_id;
-			$current->save();
+			if($current->save()){	
+				$current->listening_id=$session_listening->listening_id;
+				$current->save();
+			}
+			
+
 		}
 
 
@@ -218,11 +243,49 @@ class ApiController extends Controller
 	 	}		
 
 	}
+	protected function getNextListening(&$session_listenings,$listening_id){
+		$next_flag=false;
+
+		foreach ($session_listenings as $session_listening) 
+		{
+			if($next_flag)
+			{
+				return $session_listening->listening_id;
+			}
+			if($session_listening->listening_id==$listening_id)
+			{
+				$next_flag=true;
+			}
+		}
+		return -1;
+
+	}
+	protected function setNextListening($student_id,$listening_id){
+
+		$current=Current::model()->find('student_id=:student_id',array(':student_id'=>$student_id));
+		$current_session_id=$current->session_id;
+		//set next listening
+		$session_listenings=SessionListening::model()->findAll('session_id=:session_id',array(':session_id'=>$current_session_id));
+
+		$next_listening_id=$this->getNextListening($session_listenings,$listening_id);
+		if($next_listening_id!=-1)
+		{
+			
+			if($current)
+			{
+				$current->listening_id=$next_listening_id;
+				$current->save();
+			}
+		}
+	}
 	public function actionPushListeningLogEnd()
 	{
 		$student_id=Yii::app()->request->getPost("student_id",NULL);	
 		$listening_id=Yii::app()->request->getPost("listening_id",NULL);	
 		$listening_end_time=Yii::app()->request->getPost("listening_end_time",NULL);
+
+		$this->setNextListening($student_id,$listening_id);
+
 
 		$listening=ListeningLog::model()->find('student_id=:student_id AND listening_id=:listening_id',array(':student_id'=>$student_id,':listening_id'=>$listening_id));
 		if($listening)
