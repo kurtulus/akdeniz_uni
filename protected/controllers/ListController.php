@@ -13,6 +13,34 @@ class ListController extends Controller
 
 		$this->render('students',array('currents'=>$currents));
 	}
+	public function actionReset()
+	{
+		$students=Student::model()->findAll();
+		foreach ($students as $key => $student) {
+			$student_id=$student->student_id;
+			$current=Current::model()->find('student_id=:student_id',array('student_id'=>$student_id));
+			$session_id=$this->getFirstSessionIdforMod($current->mod_id);
+			if($current)
+			{
+				$current->session_id=$session_id;
+				$current->listening_id=5;
+				$current->save();
+			}
+
+		}
+		ListeningLog::model()->deleteAll();
+		Questionnaire::model()->deleteAll();
+		SessionLog::model()->deleteAll();
+		StudentQuestion::model()->deleteAll();
+		
+		$this->redirect(array('list/students'));
+
+	}
+	protected function getFirstSessionIdforMod($mod_id)
+	{
+		$session=Session::model()->find('mod_id=:mod_id',array('mod_id'=>$mod_id));
+		return $session->session_id;
+	}
 	protected function getCorrectAnswerId($question_id)
 	{
 		$question=Question::model()->find('question_id=:question_id',array('question_id'=>$question_id));

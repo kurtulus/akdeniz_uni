@@ -71,8 +71,8 @@
 					?>
 <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <!--<li><a href="<?php echo Yii::app()->getBaseUrl(true);?>/profile/open">Profile</a></li>-->
-                        <!--<li class="divider"></li>-->
+                        <li><a href="<?php echo Yii::app()->getBaseUrl(true);?>/profile/open">Profile</a></li>
+                        <li class="divider"></li>
                         <li><a href="<?php echo Yii::app()->createUrl('site/logout',array()); ?>">Logout</a></li>
                     </ul>
                 </li>

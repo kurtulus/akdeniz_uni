@@ -1,5 +1,13 @@
 <div class="container">
 
+<div class="panel">
+	 <div class="panel-body">
+        <div class="pull-right">
+            <a href="<?php echo Yii::app()->getBaseUrl(true);?>/list/reset" class="btn btn-danger btn-lg">Sıfırla</a>
+        </div>	 
+	 </div>
+</div>
+
 <?php
 foreach ($currents as $current_order => $current) {
 	$percentage=round(100*($current->session->session_order)/($this->getModNumberofSession($current->mod->mod_id)));
