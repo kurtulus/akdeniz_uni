@@ -18,6 +18,7 @@ foreach ($all as $session) {
     <div class="panel-heading">
         <h3 class="panel-title"><big><?php echo $session['session_name'];?></big></h3><br>
         <div class="alert alert-warning" role="alert"><?php echo $this->getSessionCompletionTime($session['session_id']);?></div>
+        <div class="alert alert-success" role="alert"><?php echo $this->getSessionQuestionnaire($session['session_id']);?></div>
     </div>
     <div class="panel-body">
     	<div class="alert alert-info" role="alert">

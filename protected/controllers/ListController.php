@@ -32,7 +32,7 @@ class ListController extends Controller
 		Questionnaire::model()->deleteAll();
 		SessionLog::model()->deleteAll();
 		StudentQuestion::model()->deleteAll();
-		
+
 		$this->redirect(array('list/students'));
 
 	}
@@ -70,6 +70,13 @@ class ListController extends Controller
 		{
 			return "<b>Henüz başlamadı!</b>";
 		}
+	}
+	protected function getSessionQuestionnaire($session_id)
+	{
+		$questionnaire=Questionnaire::model()->find('session_id=:session_id',array('session_id'=>$session_id));
+		if($questionnaire)
+			return "<strong>Başlangıç:</strong>".$questionnaire->begin_questionnaire_answer." - ".$questionnaire->end_questionnaire_answer;
+		return "<strong>Henüz anket girişi yapılmadı!</strong>";
 	}
 	protected function getListeningCompletionTime($listening_id,$student_id)
 	{
