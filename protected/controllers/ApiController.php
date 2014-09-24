@@ -101,17 +101,18 @@ class ApiController extends Controller
 
 
 	}
-	protected function getMaxSession($student_id){
+	protected function getMaxOrder($student_id){
 		$current=Current::model()->find('student_id=:student_id',array('student_id'=>$student_id));
 		if($current)
 		{
 			$model = new Session;
 			$criteria=new CDbCriteria;
-			$criteria->select='MAX(session_id) AS maxColumn';
 			$criteria->condition = "mod_id =:mod_id";
 			$criteria->params = array(':mod_id' => $current->mod_id);
-			$row = $model->model()->find($criteria);
-			print_r($row);
+			//$criteria->order="'session_id DESC'";
+			$rows = $model->model()->findAll($criteria);
+			//print_r($row);
+			return sizeof($rows);
 			//return $row['maxColumn'];
 
 		}
@@ -136,9 +137,12 @@ class ApiController extends Controller
 		//error_log("\n");
 		//error_log(print_r($next_session,1));
 
-		//print_r($this->getMaxSession($student_id));die();
+		if($this->getMaxOrder($student_id)<$next_order)
+		{
 
-		if($current)
+		}
+
+		if($current && $next_session)
 		{
 
 			$session_listening=SessionListening::model()->find('session_id=:session_id',array('session_id'=>$next_session->session_id));
