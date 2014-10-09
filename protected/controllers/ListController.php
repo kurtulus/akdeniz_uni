@@ -36,6 +36,67 @@ class ListController extends Controller
 		$this->redirect(array('list/students'));
 
 	}
+	public function actionTotalResult()
+	{
+		$all_students=Student::model()->findAll();
+		$all=array();
+foreach ($all_students as $key_1=>$all_student) {
+		$student_id=$all_student->student_id;
+		$current=Current::model()->find('student_id=:student_id',array(':student_id'=>$student_id));
+		$all_sessions=Session::model()->findAll('mod_id=:mod_id',array(':mod_id'=>$current->mod_id));
+		$all[$key_1]["student_id"]=$all_student->student_id;
+		$all[$key_1]["student_name"]=$all_student->student_name;
+		$all[$key_1]["student_surname"]=$all_student->student_surname;
+		$all[$key_1]["student_infos"]=array();
+		foreach ($all_sessions as $key0=>$session) {
+
+			$session_id=$session->session_id;
+
+			$session_listenings=SessionListening::model()->findAll('session_id=:session_id',array(':session_id'=>$session_id));
+			$all[$key_1]["student_infos"][$key0]["session_id"]=$session->session_id;
+			$all[$key_1]["student_infos"][$key0]["session_name"]=$session->session_name;
+			$all[$key_1]["student_infos"][$key0]["session_order"]=$session->session_order;
+			$all[$key_1]["student_infos"][$key0]["mod_id"]=$session->mod_id;
+			$all[$key_1]["student_infos"][$key0]["listenings"]=array();
+			foreach ($session_listenings as $key=>$session_listening) 
+			{
+				$temp_listening_id=$session_listening->listening_id;
+				$listening=Listening::model()->find('listening_id=:listening_id',array(':listening_id'=>$temp_listening_id));
+				$all[$key_1]["student_infos"][$key0]["listenings"][$key]=array('listening_id'=>$listening->listening_id,
+											  'listening_name'=>$listening->listening_name,
+											  'listening_repeat_number'=>$listening->listening_repeat_number,
+											  'listening_learning_guide_availability'=>$listening->listening_learning_guide_availability,
+
+											);
+				$criteria = new CDbCriteria();
+				$criteria->addCondition("listening_id=:listening_id");
+				//$criteria->order='RAND()';
+				$criteria->params=array(':listening_id'=>$listening->listening_id);
+				$questions = Question::model()->findAll($criteria);
+				//$questions=Question::model()->findAll('listening_id=:listening_id',array('listening_id'=>$listening->listening_id));
+				foreach ($questions as $key2 => $question) {
+					$all[$key_1]["student_infos"][$key0]["listenings"][$key]['questions'][$key2]=array('question_id'=>$question->question_id,
+																	  'question_body'=>$question->question_body,
+																	  'question_correct_answer_id'=>$question->question_correct_answer_id,
+																		);
+					$criteria = new CDbCriteria();
+					$criteria->addCondition("question_id=:question_id");
+					//$criteria->order='RAND()';
+					$criteria->params=array(':question_id'=>$question->question_id);
+					$answers = Answer::model()->findAll($criteria);
+
+					//$answers=Answer::model()->findAll('question_id=:question_id',array(':question_id'=>$question->question_id));
+					foreach ($answers as $key3 => $answer) {
+						$all[$key_1]["student_infos"][$key0]["listenings"][$key]['questions'][$key2]['answers'][$key3]=array('answer_id'=>$answer->answer_id,
+																							'answer_body'=>$answer->answer_body
+																							)	;				
+					}
+				}
+			}
+		}
+}
+		$this->render('totalresult',array('all'=>$all));
+	}
 	protected function getFirstSessionIdforMod($mod_id)
 	{
 		$session=Session::model()->find('mod_id=:mod_id',array('mod_id'=>$mod_id));

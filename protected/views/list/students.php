@@ -3,6 +3,7 @@
 <div class="panel">
 	 <div class="panel-body">
         <div class="pull-right">
+        	<a href="<?php echo Yii::app()->getBaseUrl(true);?>/list/totalResult" class="btn btn-info btn-lg">Toplu Sonuçlar</a>
             <a href="<?php echo Yii::app()->getBaseUrl(true);?>/list/reset" class="btn btn-danger btn-lg">Sıfırla</a>
         </div>	 
 	 </div>
