@@ -36,6 +36,65 @@ class ListController extends Controller
 		$this->redirect(array('list/students'));
 
 	}
+	public function actionStatisticResults()
+	{
+		$student_id=Yii::app()->request->getQuery("student_id",NULL);
+		$all_student=Student::model()->find('student_id=:student_id',array(':student_id'=>$student_id));
+		$student_id=$all_student->student_id;
+		$current=Current::model()->find('student_id=:student_id',array(':student_id'=>$student_id));
+
+		$all_sessions=Session::model()->findAll('mod_id=:mod_id',array(':mod_id'=>$current->mod_id));
+		$session_listening_map=array();
+		foreach ($all_sessions as $session) 
+		{
+			$session_listenings=SessionListening::model()->findAll('session_id=:session_id',array(':session_id'=>$session->session_id));
+			foreach ($session_listenings as $session_listening) 
+			{
+				$session_listening_map[$session->session_order][$session_listening->listening_id]=$session_listening->listening_id;
+			}
+		}
+
+
+		/*
+		foreach ($session_listenings as $key=>$session_listening) 
+		{
+			$temp_listening_id=$session_listening->listening_id;
+			$listening=Listening::model()->find('listening_id=:listening_id',array(':listening_id'=>$temp_listening_id));
+		}
+		*/
+		$this->render('statisticresults',array('session_listening_map'=>$session_listening_map,'all_sessions'=>$all_sessions,'student_id'=>$student_id));
+
+	}
+	protected function checkSessionStatus($session_id)
+	{
+		$session_log=SessionLog::model()->find('session_end_time!=NULL');
+		if($session_log)
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	protected function checkListeningStatus($student_id,$listening_id)
+	{
+		$session_log_end=ListeningLog::model()->find('listening_end_time!=NULL AND student_id=:student_id AND listening_id=:listening_id',array(':student_id'=>$student_id,':listening_id'=>$listening_id));
+		$session_log_begin  =ListeningLog::model()->find('listening_begin_time!=NULL AND student_id=:student_id AND listening_id=:listening_id',array(':student_id'=>$student_id,':listening_id'=>$listening_id));
+		
+		if($session_log_end)
+		{
+			return 'E';
+		}
+		else if($session_log_begin)
+		{
+			return 'H';
+		}
+		else
+		{
+			return '';
+		}
+	}
 	public function actionTotalResult()
 	{
 		$all_students=Student::model()->findAll();

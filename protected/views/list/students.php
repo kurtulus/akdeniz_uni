@@ -41,7 +41,9 @@ foreach ($currents as $current_order => $current) {
     </div>
  <div class="panel-footer clearfix">
         <div class="pull-right">
-            <a href="<?php echo Yii::app()->getBaseUrl(true);?>/list/results?student_id=<?php echo $current->student_id;?>" class="btn btn-primary">Sonuçlar</a>
+            <a href="<?php echo Yii::app()->getBaseUrl(true);?>/list/results?student_id=<?php echo $current->student_id;?>" class="btn btn-primary">Detaylı Sonuçlar</a>
+            <a href="<?php echo Yii::app()->getBaseUrl(true);?>/list/statisticResults?student_id=<?php echo $current->student_id;?>" class="btn btn-primary">İstatistiksel Sonuçlar</a>
+
         </div>
     </div>
 </div>
