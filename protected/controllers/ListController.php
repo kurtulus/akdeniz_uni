@@ -44,6 +44,7 @@ class ListController extends Controller
 		$current=Current::model()->find('student_id=:student_id',array(':student_id'=>$student_id));
 
 		$all_sessions=Session::model()->findAll('mod_id=:mod_id',array(':mod_id'=>$current->mod_id));
+		$mod=Mod::model()->find('mod_id=:mod_id',array(':mod_id'=>$current->mod_id));
 		$session_listening_map=array();
 		foreach ($all_sessions as $session) 
 		{
@@ -62,12 +63,12 @@ class ListController extends Controller
 			$listening=Listening::model()->find('listening_id=:listening_id',array(':listening_id'=>$temp_listening_id));
 		}
 		*/
-		$this->render('statisticresults',array('session_listening_map'=>$session_listening_map,'all_sessions'=>$all_sessions,'student_id'=>$student_id));
+		$this->render('statisticresults',array('session_listening_map'=>$session_listening_map,'all_sessions'=>$all_sessions,'student_id'=>$student_id,'all_student'=>$all_student,"mod"=>$mod));
 
 	}
 	protected function checkSessionStatus($session_id)
 	{
-		$session_log=SessionLog::model()->find('session_end_time!=NULL');
+		$session_log=SessionLog::model()->find("session_end_time!='' AND session_id=:session_id",array(':session_id'=>$session_id));
 		if($session_log)
 		{
 			return 1;
@@ -79,8 +80,8 @@ class ListController extends Controller
 	}
 	protected function checkListeningStatus($student_id,$listening_id)
 	{
-		$session_log_end=ListeningLog::model()->find('listening_end_time!=NULL AND student_id=:student_id AND listening_id=:listening_id',array(':student_id'=>$student_id,':listening_id'=>$listening_id));
-		$session_log_begin  =ListeningLog::model()->find('listening_begin_time!=NULL AND student_id=:student_id AND listening_id=:listening_id',array(':student_id'=>$student_id,':listening_id'=>$listening_id));
+		$session_log_end=ListeningLog::model()->find("listening_end_time!='' AND student_id=:student_id AND listening_id=:listening_id",array(':student_id'=>$student_id,':listening_id'=>$listening_id));
+		$session_log_begin  =ListeningLog::model()->find("listening_begin_time!='' AND student_id=:student_id AND listening_id=:listening_id",array(':student_id'=>$student_id,':listening_id'=>$listening_id));
 		
 		if($session_log_end)
 		{
@@ -94,6 +95,45 @@ class ListController extends Controller
 		{
 			return '';
 		}
+	}
+	public function actionSessionResults()
+	{
+		$student_id=Yii::app()->request->getQuery("student_id",NULL);
+		$session_id=Yii::app()->request->getQuery("session_id",NULL);
+		$SessionListening=SessionListening::model()->findAll('session_id=:session_id',array('session_id'=>$session_id));
+
+		$all_student=Student::model()->find('student_id=:student_id',array(':student_id'=>$student_id));
+		$current=Current::model()->find('student_id=:student_id',array(':student_id'=>$student_id));
+		$mod=Mod::model()->find('mod_id=:mod_id',array(':mod_id'=>$current->mod_id));
+
+		$all=array();
+
+		foreach ($SessionListening as $session_listening_item) 
+		{
+			$listening_id=$session_listening_item->listening->listening_id;
+			$questions=Question::model()->findAll('listening_id=:listening_id',array('listening_id'=>$listening_id));
+			foreach ($questions as $key=>$question) {
+				$your_answer_id=$this->getYourAnswerId($question->question_id,$student_id);
+				$correct_answer_id=$question->question_correct_answer_id;
+				if($your_answer_id)
+				{
+					if($your_answer_id==$correct_answer_id)
+					{
+						$all[$listening_id][$key]=1;
+					}
+					else
+					{
+						$all[$listening_id][$key]=0;
+					}
+				}
+				else
+				{
+					$all[$listening_id][$key]=-1;
+				}
+				
+			}
+		}
+		$this->render('sessionresult',array('sessionListening'=>$SessionListening,'all'=>$all,'all_student'=>$all_student,'mod'=>$mod));
 	}
 	public function actionTotalResult()
 	{
@@ -112,44 +152,32 @@ foreach ($all_students as $key_1=>$all_student) {
 			$session_id=$session->session_id;
 
 			$session_listenings=SessionListening::model()->findAll('session_id=:session_id',array(':session_id'=>$session_id));
-			$all[$key_1]["student_infos"][$key0]["session_id"]=$session->session_id;
-			$all[$key_1]["student_infos"][$key0]["session_name"]=$session->session_name;
-			$all[$key_1]["student_infos"][$key0]["session_order"]=$session->session_order;
-			$all[$key_1]["student_infos"][$key0]["mod_id"]=$session->mod_id;
-			$all[$key_1]["student_infos"][$key0]["listenings"]=array();
 			foreach ($session_listenings as $key=>$session_listening) 
 			{
 				$temp_listening_id=$session_listening->listening_id;
-				$listening=Listening::model()->find('listening_id=:listening_id',array(':listening_id'=>$temp_listening_id));
-				$all[$key_1]["student_infos"][$key0]["listenings"][$key]=array('listening_id'=>$listening->listening_id,
-											  'listening_name'=>$listening->listening_name,
-											  'listening_repeat_number'=>$listening->listening_repeat_number,
-											  'listening_learning_guide_availability'=>$listening->listening_learning_guide_availability,
 
-											);
+				$listening=Listening::model()->find('listening_id=:listening_id',array(':listening_id'=>$temp_listening_id));
 				$criteria = new CDbCriteria();
 				$criteria->addCondition("listening_id=:listening_id");
 				//$criteria->order='RAND()';
 				$criteria->params=array(':listening_id'=>$listening->listening_id);
 				$questions = Question::model()->findAll($criteria);
-				//$questions=Question::model()->findAll('listening_id=:listening_id',array('listening_id'=>$listening->listening_id));
 				foreach ($questions as $key2 => $question) {
-					$all[$key_1]["student_infos"][$key0]["listenings"][$key]['questions'][$key2]=array('question_id'=>$question->question_id,
-																	  'question_body'=>$question->question_body,
-																	  'question_correct_answer_id'=>$question->question_correct_answer_id,
-																		);
-					$criteria = new CDbCriteria();
-					$criteria->addCondition("question_id=:question_id");
-					//$criteria->order='RAND()';
-					$criteria->params=array(':question_id'=>$question->question_id);
-					$answers = Answer::model()->findAll($criteria);
-
-					//$answers=Answer::model()->findAll('question_id=:question_id',array(':question_id'=>$question->question_id));
-					foreach ($answers as $key3 => $answer) {
-						$all[$key_1]["student_infos"][$key0]["listenings"][$key]['questions'][$key2]['answers'][$key3]=array('answer_id'=>$answer->answer_id,
-																							'answer_body'=>$answer->answer_body
-																							)	;				
-					}
+					$your_answer_id=$this->getYourAnswerId($question->question_id,$all_student->student_id);
+        			$correct_answer_id=$question->question_correct_answer_id;
+        			if($your_answer_id==0)
+        			{
+        				$all[$key_1]["student_infos"][$temp_listening_id][$key2]=-1;
+        			}
+        			else if($your_answer_id==$correct_answer_id)
+        			{
+        				$all[$key_1]["student_infos"][$temp_listening_id][$key2]=1;
+        			}
+        			else
+        			{
+        				$all[$key_1]["student_infos"][$temp_listening_id][$key2]=0;
+        			}
+					
 				}
 			}
 		}
